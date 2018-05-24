@@ -9,14 +9,23 @@ package com.domwires.example.simplemvc.model
 	{
 		private var _firstName:String;
 		private var _lastName:String;
+		private var _birthPlace:String;
 		private var _age:int;
-		private var _country:int;
 
 		public function setFirstName(value:String):IAppModel
 		{
 			_firstName = value;
 
 			dispatchMessage(AppModelMessage.FIRST_NAME_CHANGED, null, true);
+
+			return this;
+		}
+		
+		public function setBirthPlace(value:String):IAppModel
+		{
+			_birthPlace = value;
+
+			dispatchMessage(AppModelMessage.BIRTH_PLACE_CHANGED, null, true);
 
 			return this;
 		}
@@ -38,19 +47,15 @@ package com.domwires.example.simplemvc.model
 
 			return this;
 		}
-		
-		public function setCountry(value:int):IAppModel
-		{
-			_country = value;
-
-			dispatchMessage(AppModelMessage.COUNTRY_CHANGED, null, true);
-
-			return this;
-		}
 
 		public function get firstName():String
 		{
 			return _firstName;
+		}
+		
+		public function get birthPlace():String
+		{
+			return _birthPlace;
 		}
 
 		public function get lastName():String
@@ -61,11 +66,6 @@ package com.domwires.example.simplemvc.model
 		public function get age():int
 		{
 			return _age;
-		}
-		
-		public function get country():int
-		{
-			return _country;
 		}
 	}
 }

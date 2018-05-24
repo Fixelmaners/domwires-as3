@@ -11,7 +11,7 @@ package com.domwires.example.simplemvc.context
 	import com.domwires.example.simplemvc.commands.GenerateAgeCommand;
 	import com.domwires.example.simplemvc.commands.GenerateFirstNameCommand;
 	import com.domwires.example.simplemvc.commands.GenerateLastNameCommand;
-	import com.domwires.example.simplemvc.commands.GenerateCountryCommand;
+	import com.domwires.example.simplemvc.commands.GenerateBirthPlaceCommand;
 	import com.domwires.example.simplemvc.model.AppModel;
 	import com.domwires.example.simplemvc.model.IAppModel;
 	import com.domwires.example.simplemvc.model.IAppModelImmutable;
@@ -55,8 +55,8 @@ package com.domwires.example.simplemvc.context
 
 			map(AppViewMessage.FIRST_NAME_CLICKED, GenerateFirstNameCommand);
 			map(AppViewMessage.LAST_NAME_CLICKED, GenerateLastNameCommand);
+			map(AppViewMessage.BIRTH_PLACE_CLICKED, GenerateBirthPlaceCommand);
 			map(AppViewMessage.AGE_CLICKED, GenerateAgeCommand);
-			map(AppViewMessage.COUNTRY_CLICKED, GenerateCountryCommand);
 		}
 	}
 }
